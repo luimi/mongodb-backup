@@ -1,0 +1,19 @@
+{
+  "name": "mongodb-backup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "docker": "docker build -t mongodb-backup . && docker run --rm -it -p 3000:3000 --dns 8.8.8.8 --dns 1.1.1.1 --env-file .env mongodb-backup"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "archiver": "^8.0.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "extract-zip": "^2.0.1",
+    "multer": "^2.1.1"
+  }
+}
